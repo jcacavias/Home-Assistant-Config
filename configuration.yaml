@@ -63,7 +63,7 @@ http:
 # ssl_certificate: /config/SSL/chain.pem
 # ssl_key: /config/SSL/privkey.pem
 # base_url: hass.cacavias.duckdns.org/
- api_password: Buzz1234$
+ api_password: !secret http_password
  use_x_forwarded_for: True
  trusted_proxies:
    - 127.0.0.1
@@ -118,8 +118,8 @@ homekit:
 
 lutron:
   host: 192.168.1.8
-  username: lutron
-  password: integration
+  username: !secret LUTRON_USER
+  password: !secret LUTRON_PASSWORD
 
 apcupsd:
   host: 192.168.1.26
@@ -155,15 +155,15 @@ sensor:
 
   - platform: synologydsm
     host: 192.168.1.25
-    username: hass
-    password: HoMe1234$
+    username: !secret SYNOLOGY_USER
+    password: !secret SYNOLOGY_PASSWORD
     monitored_conditions:
       - cpu_total_load
       - memory_real_usage
       - network_down
 
   - platform: google_travel_time
-    api_key: AIzaSyCjmI9FftRxfBnkdWA5PN29K3CKsgkacg8
+    api_key: !secret GOOGLE_API_KEY
     origin: 2851 Overlook Trace, Atlanta, GA 30324
     destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
 
@@ -174,12 +174,12 @@ sensor:
     destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
 
   - platform: ups
-    username: jcacavias
-    password: Buzz1234$
+    username: !secret UPS_USER
+    password: !secret UPS_PASSWORD
 
   - platform: fedex
-    username: jcacavias
-    password: Buzz1234$
+    username: !secret FEDEX_USER
+    password: !secret FEDEX_PASSWORD
 
   # - platform: template
   #   sensors:
@@ -216,19 +216,19 @@ tts:
 
 weather:
   - platform: darksky
-    api_key: 2e80adc6b435a95f623190dc2f96b41b
+    api_key: !secret DARK_SKY_API_KEY
 
 
 device_tracker:
   - platform: icloud
-    username: john.cacavias@gmail.com
-    password: Buzz1226$
+    username: !secret ICLOUD_USER
+    password: !secret ICLOUD_PASSWORD
     account_name: JCacavias
     interval_seconds: 300
 
   - platform: unifi
-    username: jcacavias
-    password: Buzz1234$
+    username: !secret UNIFI_USER
+    password: !secret UNIFI_PASSWORD
     verify_ssl: false
     new_device_defaults:
       track_new_devices: True
@@ -255,14 +255,14 @@ alarmdecoder:
       type: 'motion'
 
 nest:
-  client_id: 21aa49b6-4ffb-4b3d-bde2-6beecf56959c
-  client_secret: aWPdOAKByKafKObN4aXyxAeBg
+  client_id: !secret NEST_ID
+  client_secret: !secret NEST_PASSWORD
 
 camera:
   - platform: synology
     url: http://192.168.1.25:5000
-    username: hass
-    password: HoMe1234$
+    username: !secret SYNOLOGY_USER
+    password: !secret SYNOLOGY_PASSWORD
     verify_ssl: False
 
 #  - platform: usps
@@ -271,8 +271,8 @@ camera:
 binary_sensor:
   - platform: hikvision
     host: 192.168.1.64
-    username: admin
-    password: Buzz1234$
+    username: !secret HIK_USER
+    password: !secret HIK_PASSWORD
 
 switch:
   - platform: command_line
