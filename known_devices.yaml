@@ -1,0 +1,649 @@
+
+johnsmbp2:
+  hide_if_away: true
+  icon:
+  mac: A4:5E:60:EC:2A:4F
+  name: Johns-MBP-2
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+sonoszp:
+  hide_if_away: true
+  icon:
+  mac: 94:9F:3E:22:AD:60
+  name: SonosZP
+  picture:
+  track: true
+  vendor: unknown
+
+anastasasiphone:
+  hide_if_away: true
+  icon:
+  mac: 70:3E:AC:9C:34:7D
+  name: AnastasasiPhone
+  picture:
+  track: true
+  vendor: unknown
+
+harmonyhub:
+  hide_if_away: true
+  icon:
+  mac: 00:04:20:FB:94:BD
+  name: HarmonyHub
+  picture:
+  track: true
+  vendor: unknown
+
+raspberrypi:
+  hide_if_away: true
+  icon:
+  mac: B8:27:EB:5F:2E:FB
+  name: raspberrypi
+  picture:
+  track: true
+  vendor: unknown
+
+09aa01ac4016009f:
+  hide_if_away: true
+  icon:
+  mac: 18:B4:30:84:BA:56
+  name: 09AA01AC4016009F
+  picture:
+  track: true
+  vendor: unknown
+
+09aa01ac25160h9r:
+  hide_if_away: true
+  icon:
+  mac: 18:B4:30:7D:23:20
+  name: 09AA01AC25160H9R
+  picture:
+  track: true
+  vendor: Nest Labs Inc.
+
+johniphone:
+  hide_if_away: true
+  icon:
+  mac: B0:19:C6:BC:D2:DA
+  name: John-iPhone
+  picture:
+  track: true
+  vendor: unknown
+
+anastasiasipad:
+  hide_if_away: true
+  icon:
+  mac: D0:E1:40:A9:BA:9B
+  name: Anastasias-iPad
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+johncacaviassipad:
+  hide_if_away: false
+  icon:
+  mac:
+  name: John Cacavias's iPad
+  picture:
+  track: true
+
+johnsmacbookpro:
+  hide_if_away: false
+  icon:
+  mac:
+  name: John's MacBook Pro
+  picture:
+  track: true
+
+anastasiacacaviasiphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Anastasia Cacavias' iPhone
+  picture:
+  track: true
+
+johncaciassipad:
+  hide_if_away: false
+  icon:
+  mac: 30:10:E4:84:52:08
+  name: JohnCaciassiPad
+  picture:
+  track: true
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iphone
+  picture:
+  track: true
+
+katinasiphone6:
+  hide_if_away: false
+  icon:
+  mac: 54:4E:90:40:50:5C
+  name: KatinasiPhone6
+  picture:
+  track: true
+
+chromecast:
+  hide_if_away: false
+  icon:
+  mac: D0:E7:82:B9:81:49
+  name: Chromecast
+  picture:
+  track: true
+
+macbookair:
+  hide_if_away: false
+  icon:
+  mac: 30:35:AD:AF:30:32
+  name: MacBook-Air
+  picture:
+  track: true
+
+appletv4:
+  hide_if_away: false
+  icon:
+  mac: B0:34:95:3D:4E:9C
+  name: Apple-TV-4
+  picture:
+  track: true
+
+katinasplewatch:
+  hide_if_away: false
+  icon:
+  mac: 24:5B:A7:92:6C:CB
+  name: KatinaspleWatch
+  picture:
+  track: true
+
+amazon03313b58c:
+  hide_if_away: false
+  icon:
+  mac: 68:54:FD:71:42:C6
+  name: amazon-03313b58c
+  picture:
+  track: true
+
+josephsiphone:
+  hide_if_away: false
+  icon:
+  mac: B8:53:AC:D5:9C:A3
+  name: JOSEPHs-iPhone
+  picture:
+  track: true
+
+ipad:
+  hide_if_away: false
+  icon:
+  mac: B8:63:4D:A0:49:D3
+  name: iPad
+  picture:
+  track: true
+
+iphone_2:
+  hide_if_away: false
+  icon:
+  mac: E0:C7:67:30:77:6C
+  name: iPhone
+  picture:
+  track: true
+
+09aa01ac02180vrt:
+  hide_if_away: false
+  icon:
+  mac: 64:16:66:0F:2F:50
+  name: 09AA01AC02180VRT
+  picture:
+  track: true
+
+jimcacasiphonex:
+  hide_if_away: false
+  icon:
+  mac: B0:19:C6:98:A7:8E
+  name: JimCacasiPhoneX
+  picture:
+  track: true
+
+paulasiphonex:
+  hide_if_away: false
+  icon:
+  mac: B0:19:C6:C1:72:87
+  name: Paulas-iPhone-X
+  picture:
+  track: true
+
+jimcacasipadpro:
+  hide_if_away: false
+  icon:
+  mac: 70:48:0F:9B:38:CB
+  name: JimCacasiPadPro
+  picture:
+  track: true
+
+iphone3:
+  hide_if_away: false
+  icon:
+  mac: B4:8B:19:40:67:DC
+  name: iPhone-3
+  picture:
+  track: true
+
+ac3743de1e8b:
+  hide_if_away: false
+  icon:
+  mac: AC:37:43:DE:1E:8B
+  name: ac3743de1e8b
+  picture:
+  track: true
+
+elenidessiphone:
+  hide_if_away: false
+  icon:
+  mac: 40:98:AD:2F:B3:CB
+  name: EleniDessiPhone
+  picture:
+  track: true
+
+katinasipad:
+  hide_if_away: false
+  icon:
+  mac: 3C:E0:72:BF:9D:D7
+  name: Katinas-iPad
+  picture:
+  track: true
+
+ipad_2:
+  hide_if_away: false
+  icon:
+  mac: 34:C0:59:51:F7:11
+  name: iPad
+  picture:
+  track: true
+
+iphone_3:
+  hide_if_away: false
+  icon:
+  mac: 00:56:CD:70:88:50
+  name: iPhone
+  picture:
+  track: true
+
+iphone_4:
+  hide_if_away: false
+  icon:
+  mac: DC:2B:2A:32:99:0A
+  name: iPhone
+  picture:
+  track: true
+
+iphone_5:
+  hide_if_away: false
+  icon:
+  mac: 64:5A:ED:08:B8:5C
+  name: iPhone
+  picture:
+  track: true
+
+raspberrypi_2:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:63:65:12
+  name: raspberrypi
+  picture:
+  track: true
+
+katinasiphone6_2:
+  hide_if_away: false
+  icon:
+  mac: A0:56:F3:80:BF:4B
+  name: KatinasiPhone6
+  picture:
+  track: true
+
+760lt1172811t:
+  hide_if_away: false
+  icon:
+  mac: E0:9D:31:13:6B:74
+  name: 760L-T1-172811T
+  picture:
+  track: true
+
+brettiphonexs:
+  hide_if_away: false
+  icon:
+  mac: FC:2A:9C:9D:2F:F5
+  name: Brett-iPhone-Xs
+  picture:
+  track: true
+
+brettsaplewatch:
+  hide_if_away: false
+  icon:
+  mac: 68:AB:1E:10:86:F8
+  name: brettsApleWatch
+  picture:
+  track: true
+
+48bf6bf02ec0:
+  hide_if_away: false
+  icon:
+  mac: 48:BF:6B:F0:2E:C0
+  name: 48bf6bf02ec0
+  picture:
+  track: true
+
+jonathansair:
+  hide_if_away: false
+  icon:
+  mac: B8:E8:56:04:34:6A
+  name: Jonathans-Air
+  picture:
+  track: true
+
+jonathansiphone:
+  hide_if_away: false
+  icon:
+  mac: 54:99:63:F3:D6:E2
+  name: JonathansiPhone
+  picture:
+  track: true
+
+amandasipad:
+  hide_if_away: false
+  icon:
+  mac: 04:15:52:55:59:3F
+  name: Amandas-iPad
+  picture:
+  track: true
+
+anastasia_cacavias_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: anastasia cacavias iphone
+  picture:
+  track: true
+
+sonoszp_2:
+  hide_if_away: false
+  icon:
+  mac: B8:E9:37:9D:2B:B2
+  name: SonosZP
+  picture:
+  track: true
+
+sonoszp_3:
+  hide_if_away: false
+  icon:
+  mac: B8:E9:37:9A:90:DC
+  name: SonosZP
+  picture:
+  track: true
+
+cacaviassmbp:
+  hide_if_away: false
+  icon:
+  mac: 88:E9:FE:4C:64:FB
+  name: Cacaviass-MBP
+  picture:
+  track: true
+
+cacaviassmacbookpro:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Cacavias's MacBook Pro
+  picture:
+  track: true
+
+paulasair:
+  hide_if_away: false
+  icon:
+  mac: 60:C5:47:04:6E:DA
+  name: Paulas-Air
+  picture:
+  track: true
+
+stavrouasiphone:
+  hide_if_away: false
+  icon:
+  mac: D4:61:DA:37:D0:90
+  name: StavrouasiPhone
+  picture:
+  track: true
+
+amazonef97799a6:
+  hide_if_away: false
+  icon:
+  mac: FC:A6:67:F3:C5:66
+  name: amazon-ef97799a6
+  picture:
+  track: true
+
+ipad_3:
+  hide_if_away: false
+  icon:
+  mac: 78:67:D7:5E:3C:A9
+  name: iPad
+  picture:
+  track: true
+
+tcl_roku_tv__262:
+  hide_if_away: false
+  icon:
+  mac: C0:D2:F3:E0:62:25
+  name: TCL Roku TV - 262
+  picture:
+  track: true
+
+00044b83e4cd:
+  hide_if_away: false
+  icon:
+  mac: 00:04:4B:83:E4:CD
+  name: 00044b83e4cd
+  picture:
+  track: true
+
+hpf397a7:
+  hide_if_away: false
+  icon:
+  mac: 00:1E:0B:F3:97:A9
+  name: HPF397A7
+  picture:
+  track: true
+
+billandsiphone2:
+  hide_if_away: false
+  icon:
+  mac: CC:2D:B7:AA:EF:E2
+  name: BillandsiPhone2
+  picture:
+  track: true
+
+3c286d264ec8:
+  hide_if_away: false
+  icon:
+  mac: 3C:28:6D:26:4E:C8
+  name: 3c286d264ec8
+  picture:
+  track: true
+
+john_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: John-iPhone
+  picture:
+  track: true
+
+cacavias_smacbookpro:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Cacavias's MacBook Pro
+  picture:
+  track: true
+
+anastasia_sipad:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Anastasia's iPad
+  picture:
+  track: true
+
+john_smacbookpro:
+  hide_if_away: false
+  icon:
+  mac:
+  name: John's MacBook Pro
+  picture:
+  track: true
+
+amazon_56d0aa44d:
+  hide_if_away: false
+  icon:
+  mac: CC:F7:35:7D:D9:31
+  name: amazon-56d0aa44d
+  picture:
+  track: true
+
+ipad_6:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iPad (6)
+  picture:
+  track: true
+
+android_b4990cd34aa70a12:
+  hide_if_away: false
+  icon:
+  mac: CC:C0:79:5A:9E:18
+  name: android-b4990cd34aa70a12
+  picture:
+  track: true
+
+00_11_32_3a_00_5f:
+  hide_if_away: false
+  icon:
+  mac: 00:11:32:3A:00:5F
+  name: 00 11 32 3a 00 5f
+  picture:
+  track: true
+
+00_11_32_3a_00_60:
+  hide_if_away: false
+  icon:
+  mac: 00:11:32:3A:00:60
+  name: 00 11 32 3a 00 60
+  picture:
+  track: true
+
+00_04_4b_83_e4_cf:
+  hide_if_away: false
+  icon:
+  mac: 00:04:4B:83:E4:CF
+  name: 00 04 4b 83 e4 cf
+  picture:
+  track: true
+
+00_18_dd_32_14_f1:
+  hide_if_away: false
+  icon:
+  mac: 00:18:DD:32:14:F1
+  name: 00 18 dd 32 14 f1
+  picture:
+  track: true
+
+00_c0_b7_97_c2_ab:
+  hide_if_away: false
+  icon:
+  mac: 00:C0:B7:97:C2:AB
+  name: 00 c0 b7 97 c2 ab
+  picture:
+  track: true
+
+00_0f_e7_01_69_b6:
+  hide_if_away: false
+  icon:
+  mac: 00:0F:E7:01:69:B6
+  name: 00 0f e7 01 69 b6
+  picture:
+  track: true
+
+b0_34_95_3d_4e_b1:
+  hide_if_away: false
+  icon:
+  mac: B0:34:95:3D:4E:B1
+  name: b0 34 95 3d 4e b1
+  picture:
+  track: true
+
+ac_cc_8e_25_02_58:
+  hide_if_away: false
+  icon:
+  mac: AC:CC:8E:25:02:58
+  name: ac cc 8e 25 02 58
+  picture:
+  track: true
+
+ipod_touch:
+  hide_if_away: false
+  icon:
+  mac: 08:F4:AB:22:A0:03
+  name: iPod-touch
+  picture:
+  track: true
+
+34_c0_59_4b_31_71:
+  hide_if_away: false
+  icon:
+  mac: 34:C0:59:4B:31:71
+  name: 34 c0 59 4b 31 71
+  picture:
+  track: true
+
+ipad_7:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iPad (7)
+  picture:
+  track: true
+
+sonoszp_4:
+  hide_if_away: false
+  icon:
+  mac: B8:E9:37:97:C4:24
+  name: SonosZP
+  picture:
+  track: true
+
+18_e8_29_ac_72_e7:
+  hide_if_away: false
+  icon:
+  mac: 18:E8:29:AC:72:E7
+  name: 18 e8 29 ac 72 e7
+  picture:
+  track: true
+
+a4_14_37_c6_47_23:
+  hide_if_away: false
+  icon:
+  mac: A4:14:37:C6:47:23
+  name: a4 14 37 c6 47 23
+  picture:
+  track: true
+
+john_cacaviass_ipad:
+  hide_if_away: false
+  icon:
+  mac:
+  name: John Cacavias's iPad
+  picture:
+  track: true

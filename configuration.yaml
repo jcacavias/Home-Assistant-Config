@@ -1,0 +1,343 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 33.832940
+  longitude: -84.358403
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 292
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  customize:
+    zone.Home:
+      track_ios: true
+    zone.Stasia_Work:
+      track_ios: true
+    zone.New_Home:
+      track_ios: true
+    zone.Airport:
+      track_ios: true
+    group.all_devices:
+      hidden: false
+
+
+zone Stasia_Work:
+  name: Stasia Work
+  latitude: 33.90960192146805
+  longitude: -84.35290743368768
+  icon: mdi:hospital-building
+
+
+zone Airport:
+  name: Airport
+  latitude: 33.64000000
+  longitude: -84.445
+  radius: 250
+  icon: mdi:airplane
+
+
+zone New_Home:
+  name: New Home
+  latitude: 34.102117
+  longitude: -84.397289
+  icon: mdi:home
+
+script: !include scripts/scripts.yaml
+automation: !include automation.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+map:
+ios:
+
+# Enables the frontend
+frontend:
+  javascript_version: auto
+  themes: !include themes.yaml
+
+config:
+
+http:
+# ssl_certificate: /config/SSL/chain.pem
+# ssl_key: /config/SSL/privkey.pem
+# base_url: hass.cacavias.duckdns.org/
+ api_password: Buzz1234$
+ use_x_forwarded_for: True
+ trusted_proxies:
+   - 127.0.0.1
+   - 192.168.1.25
+ trusted_networks:
+   - 192.168.1.0/24
+ ip_ban_enabled: true
+ login_attempts_threshold: 5
+
+lovelace:
+#  mode: yaml
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+person:
+
+#usps:
+#  username: jcacavias
+#  password: Buzz1234
+#  driver: phantomjs
+#  name: USPS Townhome
+
+homekit:
+  filter:
+    include_domains:
+      - alarm_control_panel
+      - light
+      - media_player
+  entity_config:
+    media_player.master_bathroom:
+      feature_list:
+        - feature: play_pause
+        - feature: toggle_mute
+    alarm_control_panel.alarm_panel:
+      code: '0410'
+
+lutron:
+  host: 192.168.1.8
+  username: lutron
+  password: integration
+
+apcupsd:
+  host: 192.168.1.26
+
+sensor:
+#  - platform: scrape
+#    resource: https://myair.resmed.com
+#    username: jcacavias@gmail.com
+#    password: Buzz1234
+#    name: 'MyAir Score'
+#    select: 'script:nth-of-type(14)'
+#    value_template: '{{ value }}'
+
+#  - platform: apcupsd
+#    resources:
+#      - bcharge
+#      - linev
+#      - loadpct
+#      - nominv
+#      - nompower
+#      - numxfers
+#      - outputv
+#      - status
+#      - timeleft
+#      - tonbatt
+
+
+#  - platform: nut
+#    resources:
+#      - battery.voltage
+#      - battery.runtime
+#      - battery.charge
+
+  - platform: synologydsm
+    host: 192.168.1.25
+    username: hass
+    password: HoMe1234$
+    monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - network_down
+
+  - platform: google_travel_time
+    api_key: AIzaSyCjmI9FftRxfBnkdWA5PN29K3CKsgkacg8
+    origin: 2851 Overlook Trace, Atlanta, GA 30324
+    destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
+
+  - platform: google_travel_time
+    api_key: AIzaSyCjmI9FftRxfBnkdWA5PN29K3CKsgkacg8
+    name: New Home to Work
+    origin: New Home
+    destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
+
+  - platform: ups
+    username: jcacavias
+    password: Buzz1234$
+
+  - platform: fedex
+    username: jcacavias
+    password: Buzz1234$
+
+  # - platform: template
+  #   sensors:
+  #     battery_iphone:
+  #       unit_of_measurement: '%'
+  #       value_template: >-
+  #           {%- if states.device_tracker.iphone.attributes.battery %}
+  #               {{ states.device_tracker.iphone.attributes.battery }}
+  #           {% else %}
+  #               {{ states.sensor.battery_iphone.state }}
+  #           {%- endif %}
+  #     charging_iphone:
+  #       value_template: >-
+  #           {%- if states.device_tracker.iphone.attributes.battery_status %}
+  #               {{ states.device_tracker.iphone.attributes.battery_status }}
+  #           {% else %}
+  #               {{ states.sensor.charging_iphone.state }}
+  #           {%- endif %}
+  #     battery_iphone2:
+  #       unit_of_measurement: '%'
+  #       value_template: >-
+  #         {%- if states.device_tracker.iphone.attributes.battery %}
+  #             {{ states.device_tracker.iphone.attributes.battery|round }}
+  #         {% else %}
+  #             {{ states.sensor.battery_iphone.state }}
+  #         {%- endif %}
+  #       icon_template: '{%- if is_state("sensor.battery_iphone", "unknown") %}mdi:battery-unknown{%- elif is_state_attr("device_tracker.iphone", "battery_status", "Charging") %}mdi:battery-charging{%- elif  states.device_tracker.iphone.attributes.battery <= 5 %}mdi:battery-outline{%- elif states.device_tracker.iphone.attributes.battery >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}{%- endif %}'
+
+
+# Text to speech
+tts:
+ - platform: google
+
+
+weather:
+  - platform: darksky
+    api_key: 2e80adc6b435a95f623190dc2f96b41b
+
+
+device_tracker:
+  - platform: icloud
+    username: john.cacavias@gmail.com
+    password: Buzz1226$
+    account_name: JCacavias
+    interval_seconds: 300
+
+  - platform: unifi
+    username: jcacavias
+    password: Buzz1234$
+    verify_ssl: false
+    new_device_defaults:
+      track_new_devices: True
+      hide_if_away: True
+
+
+alarmdecoder:
+  device:
+    type: socket
+    host: 192.168.1.40
+    port: 10000
+  panel_display: true
+  zones:
+    01:
+      name: 'Garage Door'
+      type: 'door'
+
+    02:
+      name: 'Front Door'
+      type: 'door'
+
+    06:
+      name: 'Downstairs Motion'
+      type: 'motion'
+
+nest:
+  client_id: 21aa49b6-4ffb-4b3d-bde2-6beecf56959c
+  client_secret: aWPdOAKByKafKObN4aXyxAeBg
+
+camera:
+  - platform: synology
+    url: http://192.168.1.25:5000
+    username: hass
+    password: HoMe1234$
+    verify_ssl: False
+
+#  - platform: usps
+#    scan_interval: 5
+
+binary_sensor:
+  - platform: hikvision
+    host: 192.168.1.64
+    username: admin
+    password: Buzz1234$
+
+switch:
+  - platform: command_line
+    switches:
+      #toggles office Roku TV
+      john_mirror_power:
+        command_on: 'curl -X POST http://192.168.1.27:8060/keypress/PowerOn'
+        command_off: 'curl -X POST http://192.168.1.27:8060/keypress/PowerOff'
+        command_state: 'curl -s GET http://192.168.1.27:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
+        value_template: '{{ value == "ON" }}'
+
+
+#	 platform: mjpeg
+#    mjpeg_url: http://192.168.1.64/Streaming/channels/1/preview
+#    username: admin
+#    password: Buzz1234$
+
+logger:
+
+# apcupsd:
+#  host: 192.168.1.65
+
+
+group:
+  Admin:
+    view: yes
+    entities:
+      - group.device
+      - group.synology
+      - group.all_devices
+
+  device:
+    name: Devices
+    entities:
+      - sensor.battery_iphone2
+
+  synology:
+    name: Synology NAS
+    entities:
+      - sensor.cpu_load_total
+      - sensor.memory_usage_real
+      - sensor.network_down
+
+media_player:
+ - platform: kodi
+   host: 192.168.1.7
+
+ - platform: sonos
+
+
+rest_command:
+  mirror_on:
+    url: http://192.168.1.14:8080/remote?action=MONITORON
+#    value_template: '{{ value == "ON" }}'
+
+speedtestdotnet:
+  scan_interval:
+    hours: 24
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+
+#remote:
+ #- platform: harmony
+ #  name: Living Room
+  # host: 192.168.1.5

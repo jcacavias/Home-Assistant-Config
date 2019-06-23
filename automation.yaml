@@ -1,0 +1,55 @@
+  - alias: 'downstairs motion light'
+    trigger:
+      platform: state
+      entity_id:  binary_sensor.downstairs_motion
+      to: 'on'
+    action:
+      service: homeassistant.turn_on
+      entity_id: light.downstairs_hall_zone_01
+
+  - alias: 'Turn off downstairs light 30 sec after last movement'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.downstairs_motion
+      to: 'off'
+      for:
+       seconds: 10
+    action:
+      service: homeassistant.turn_off
+      entity_id: light.downstairs_hall_zone_01
+
+  - alias: 'downstairs motion light'
+    trigger:
+      platform: state
+      entity_id:  binary_sensor.downstairs_motion
+      to: 'on'
+    action:
+      service: rest_command.mirror_on
+
+  - alias: 'alarm disarmed - notification'
+    trigger:
+      platform: state
+      entity_id:  alarm_control_panel.alarm_panel
+      to: 'disarmed'
+    action:
+      - service: script.turn_on
+        entity_id: script.sonos_working
+        data:
+          variables:
+            message: "The alarm has been disarmed"
+
+  - alias: Automatic Theme Change
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sun.sun
+    action:
+      - service_template: frontend.set_theme
+        data_template:
+          name: >
+            {% if states.sun.sun.state == "above_horizon" %}
+              day
+            {% else %}
+              night
+            {% endif %}

@@ -1,0 +1,90 @@
+title: My Awesome Home
+# Include external resources
+resources:
+  - url: /local/mini-media-player-0.9.8/mini-media-player-bundle.js?v=0.9.8
+    type: module
+  - url: /local/mini-graph-card-0.8/mini-graph-card-bundle.js
+    type: module
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+  - weblink.router
+views:
+    # View tab title.
+  - title: Example
+    # Unique id for direct access /lovelace/${id}. If you don't specify one, it is added automatically.
+    id: example
+    # Optional background (overwrites the global background).
+    background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+        # The filter card will filter entities for their state
+      - id: peoplehome # Every card needs an ID, if you don't specify one, it is added automatically.
+        type: entity-filter
+        entities:
+          - device_tracker.iphone
+          - device_tracker.anastasia_cacavias_iphone
+        state_filter:
+          - 'home'
+        card: glance
+        title: People that are home
+      
+      - type: custom:mini-media-player
+        entity: media_player.master_bathroom
+        icon: mdi:router-wireless
+        artwork_border: true
+        show_source: true
+        show_progress: true
+        
+      - type: custom:mini-media-player
+        entity: media_player.living_room
+        icon: mdi:router-wireless
+        artwork_border: true
+        show_source: true
+        show_progress: true
+
+        # The picture entity card will represent an entity with a picture
+      - type: picture-entity
+        image: https://www.home-assistant.io/images/default-social.png
+        entity: light.downstairs_hall_zone_01
+
+      - type: alarm-panel
+        entity: alarm_control_panel.alarm_panel
+
+      - type: thermostat
+        entity: climate.living_room
+        
+      - type: thermostat
+        entity: climate.upstairs
+        
+      - type: entities
+        title: Mirror TVs
+        show_header_toggle: false
+        entities:
+         - switch.john_mirror_power
+         
+      - type: weather-forecast
+        entity: weather.dark_sky
+        
+      - type: custom:mini-graph-card
+        name: SpeedTest.net
+        icon: mdi:server
+        hours_to_show: 1
+        points_per_hour: 20
+        entities:
+         - sensor.speedtest_download
+         - sensor.speedtest_upload
+
+    # Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Second view
+    cards:
+      - type: markdown
+        title: Lovelace
+        content: >
+          Welcome to your **Lovelace UI**.
