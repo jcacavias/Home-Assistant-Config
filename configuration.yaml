@@ -97,8 +97,8 @@ sun:
 person:
 
 #usps:
-#  username: jcacavias
-#  password: Buzz1234
+#  username: !secret USPS_USER
+#  password: !secret USPS_PASSWORD
 #  driver: phantomjs
 #  name: USPS Townhome
 
@@ -125,13 +125,6 @@ apcupsd:
   host: 192.168.1.26
 
 sensor:
-#  - platform: scrape
-#    resource: https://myair.resmed.com
-#    username: jcacavias@gmail.com
-#    password: Buzz1234
-#    name: 'MyAir Score'
-#    select: 'script:nth-of-type(14)'
-#    value_template: '{{ value }}'
 
 #  - platform: apcupsd
 #    resources:
@@ -168,7 +161,7 @@ sensor:
     destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
 
   - platform: google_travel_time
-    api_key: AIzaSyCjmI9FftRxfBnkdWA5PN29K3CKsgkacg8
+    api_key: !secret GOOGLE_API_KEY
     name: New Home to Work
     origin: New Home
     destination: 1000 Johnson Ferry Road, NE Atlanta, GA 30342
